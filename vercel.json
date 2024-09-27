@@ -7,14 +7,7 @@
     ],
     "redirects": [
       {
-        "source": "/(.*)",
-        "has": [
-          {
-            "type": "header",
-            "key": "referer",
-            "value": "^$"
-          }
-        ],
+        "source": "/(.*\\.js|.*\\.css|.*\\.json)",
         "statusCode": 403,
         "destination": "/403.html"
       }
