@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🍔 Hamburgueria Saborosa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/logo/hamburger-logo.png">
+    <!-- Fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <img src="assets/img/icos/wpp-ico.png" alt="WhatsApp" style="width: 60px; height: 60px;">
+    </a>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">
+                    <img src="/assets/img/logo/hamburger-logo.png" alt="Logo">
+                    Hamburgueria Saborosa
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-hamburger"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-square">
+                    <img src="/assets/img/logo/hamburger-logo.png" alt="Hambúrguer">
+                </div>
+                <h1>Bem-vindo à Hamburgueria Saborosa</h1>
+                <a href="#menu" class="btn">Veja Nosso Cardápio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="/assets/img/menu/about-burguer.jpeg" alt="Sobre Nós">
+            <div class="about-text">
+                <h2>Sobre Nós</h2>
+                <p>Nossa hamburgueria oferece os hambúrgueres mais suculentos feitos com ingredientes frescos e selecionados. Venha nos visitar e desfrute de uma experiência gastronômica única.</p>
+                <a href="#contact" class="btn">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Nosso Cardápio</h2>
+
+        <!-- Barra de Busca -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos...">
+        </div>
+
+        <!-- Botões de Filtro -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="burger">Burger</button>
+            <button class="filter-btn" data-filter="cheddars">Cheddar's</button>
+            <button class="filter-btn" data-filter="especiais">Especiais</button>
+            <button class="filter-btn" data-filter="milkshake">MilkShake</button>
+            <button class="filter-btn" data-filter="sobremesas">Sobremesas</button>
+            <button class="filter-btn" data-filter="refrigerantes">Refrigerantes</button>
+            <button class="filter-btn" data-filter="sucos">Sucos</button>
+        </div>
+
+        <div class="menu-container">
+            <!-- Item 1 -->
+            <div class="menu-item burger">
+                <img src="/assets/img/menu/burguer-1.jpeg" alt="Hambúrguer Clássico">
+                <h3>Hambúrguer Clássico</h3>
+                <p>Pão artesanal, carne 100% bovina, alface, tomate, queijo cheddar e molho especial.</p>
+                <span>R$ 25,00</span>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-item cheddars">
+                <img src="/assets/img/menu/burguer-2.jpeg" alt="Cheddar Especial">
+                <h3>Cheddar Especial</h3>
+                <p>Hambúrguer suculento, queijo cheddar derretido, cebola caramelizada e molho BBQ.</p>
+                <span>R$ 28,00</span>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-item milkshake">
+                <img src="/assets/img/menu/milkshake-1.jpeg" alt="MilkShake de Chocolate">
+                <h3>MilkShake de Chocolate</h3>
+                <p>Cremoso milkshake com sorvete artesanal de chocolate.</p>
+                <span>R$ 15,00</span>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-item burger">
+                <img src="/assets/img/menu/burguer-3.jpeg" alt="Hambúrguer de Frango Crocante">
+                <h3>Hambúrguer de Frango Crocante</h3>
+                <p>Pão brioche, filé de frango empanado, alface, maionese especial e queijo prato.</p>
+                <span>R$ 27,00</span>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-item cheddars">
+                <img src="/assets/img/menu/burguer-4.jpeg" alt="Cheddar Bacon">
+                <h3>Cheddar Bacon</h3>
+                <p>Hambúrguer grelhado, queijo cheddar, bacon crocante e molho cheddar defumado.</p>
+                <span>R$ 30,00</span>
+            </div>
+            <!-- Item 6 -->
+            <div class="menu-item especiais">
+                <img src="/assets/img/menu/burguer-5.jpeg" alt="Super Combo Especial">
+                <h3>Super Combo Especial</h3>
+                <p>Dois hambúrgueres, queijo cheddar, onion rings, molho barbecue e batatas fritas.</p>
+                <span>R$ 45,00</span>
+            </div>
+            <!-- Item 7 -->
+            <div class="menu-item milkshake">
+                <img src="/assets/img/menu/milkshake-2.jpeg" alt="MilkShake de Morango">
+                <h3>MilkShake de Morango</h3>
+                <p>Delicioso milkshake com sorvete de morango natural e chantilly.</p>
+                <span>R$ 18,00</span>
+            </div>
+            <!-- Item 8 -->
+            <div class="menu-item sobremesas">
+                <img src="/assets/img/menu/brownie-ice-1.jpeg" alt="Brownie com Sorvete">
+                <h3>Brownie com Sorvete</h3>
+                <p>Brownie de chocolate quente acompanhado de uma bola de sorvete de baunilha.</p>
+                <span>R$ 20,00</span>
+            </div>
+            <!-- Item 9 -->
+            <div class="menu-item refrigerantes">
+                <img src="/assets/img/menu/coca-1.jpeg" alt="Coca-Cola">
+                <h3>Coca-Cola</h3>
+                <p>Refrigerante gelado, clássico e refrescante.</p>
+                <span>R$ 7,00</span>
+            </div>
+            <!-- Item 10 -->
+            <div class="menu-item sucos">
+                <img src="/assets/img/menu/suco-1.jpeg" alt="Suco de Laranja Natural">
+                <h3>Suco de Laranja Natural</h3>
+                <p>Suco fresco e natural de laranja, sem adição de açúcar.</p>
+                <span>R$ 10,00</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Visite-nos</h3>
+                <div class="map-container">
+                    <!-- Insira o iframe do Google Maps aqui -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.164688883873!2d-35.20801942547387!3d-5.832393357492135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff8566fe1f6f%3A0xd35194a8cdd83856!2sIMD%20-%20Instituto%20Metrop%C3%B3le%20Digital%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN%2C%2059076-560!5e0!3m2!1spt-BR!2sbr!4v1727395468759!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>Rua dos Hambúrgueres, 123<br>Cidade, Estado<br>Telefone: (11) 1234-5678</p>
+                <h3>Horário de Funcionamento</h3>
+                <p>Seg - Sex: 11h - 23h<br>Sáb - Dom: 12h - 00h</p>
+                <p>Precisa falar conosco? Entre em contato pelas redes sociais abaixo!</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/5511999999999" target="_blank">
+                        <img src="assets/img/icos/wpp-ico.png" alt="WhatsApp" style="width: 48px; height: 48px;">
+                    </a>
+                    <a href="https://www.instagram.com/username_aleatorio" target="_blank">
+                        <img src="assets/img/icos/insta-ico.png" alt="Instagram" style="width: 48px; height: 48px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Hamburgueria Saborosa. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal de Detalhes do Produto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="Detalhe do Produto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <span id="modal-price"></span>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

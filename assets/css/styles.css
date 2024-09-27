@@ -1,0 +1,613 @@
+/* Reset */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background: #d32f2f;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: auto;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFF176;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    /* color: #fff; */
+    font-size: 28px;
+    transition: transform 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/logo/burger-home.jpeg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-square {
+    width: 150px;
+    height: 150px;
+    background-color: #FFF176;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+}
+
+.hero-square img {
+    width: 100px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: #FFF176;
+    color: #D32F2F;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #FFEE58;
+}
+
+/* Sobre Nós */
+#about {
+    background: #FFEBEE;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+.about-container img {
+    width: 50%;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    color: #D32F2F;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-text .btn {
+    background: #D32F2F;
+    color: #fff;
+}
+
+.about-text .btn:hover {
+    background: #C62828;
+}
+
+/* Seções */
+section {
+    padding: 80px 20px;
+}
+
+/* Cardápio */
+#menu {
+    background: #FFF8E1;
+}
+
+#menu h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #D32F2F;
+    margin-bottom: 60px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.menu-item {
+    width: calc(33.333% - 40px);
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 15px 0;
+    font-size: 26px;
+    color: #D32F2F;
+}
+
+.menu-item p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #C62828;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Barra de Busca */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #D32F2F;
+    border-radius: 5px;
+}
+
+/* Botões de Filtro */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: #D32F2F;
+    color: #fff;
+    padding: 12px 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover {
+    background: #aa2222;
+    color: #FFF176;
+    transition: color 0.3s;
+    
+}
+
+.filter-btn.active {
+    background: #FFF176;
+    color: #D32F2F;
+}
+
+/* Contato */
+#contact {
+    background: #FFEBEE;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #D32F2F;
+    margin-bottom: 60px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeIn 1s;
+}
+
+.contact-info {
+    width: 100%;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #D32F2F;
+}
+
+.contact-info p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #D32F2F;
+    font-size: 40px;
+    margin-right: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #C62828;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #D32F2F;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal h3 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #D32F2F;
+}
+
+.modal p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.modal span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #C62828;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        padding-top: 120px;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+    }
+
+    .nav-links li a {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links li a i {
+        margin-right: 10px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active {
+        transform: rotate(90deg);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .menu-item {
+        width: calc(50% - 40px);
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container img,
+    .about-text {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-container img {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+/* Animação do Botão WhatsApp */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Animação de FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação dos Links do Menu */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animação de Bounce no Ícone */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilos para a seção de contato com o mapa */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeIn 1s;
+}
+
+.contact-info, .map-container {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info, .map-container {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+    .map-container iframe {
+        min-height: 300px;
+    }
+}
+
+
+
