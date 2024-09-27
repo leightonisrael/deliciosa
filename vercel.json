@@ -1,0 +1,23 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "header",
+            "key": "referer",
+            "value": "^$"
+          }
+        ],
+        "statusCode": 403,
+        "destination": "/403.html"
+      }
+    ]
+  }
+  
