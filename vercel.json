@@ -7,7 +7,12 @@
     ],
     "redirects": [
       {
-        "source": "/(.*\\.js|.*\\.css|.*\\.json)",
+        "source": "/assets/js/(.*)",
+        "statusCode": 403,
+        "destination": "/403.html"
+      },
+      {
+        "source": "/assets/css/(.*)",
         "statusCode": 403,
         "destination": "/403.html"
       }
