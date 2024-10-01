@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- Área para notificações -->
+    <div id="notification-container"></div>
+
     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
         <img src="assets/img/icos/wpp-ico.png" alt="WhatsApp" style="width: 60px; height: 60px;">
@@ -24,7 +27,7 @@
             <div class="logo">
                 <a href="#home">
                     <img src="/assets/img/logo/hamburger-logo.png" alt="Logo">
-                    Hamburgueria Saborosa
+                    <span>Hamburgueria<br>Saborosa</span>
                 </a>
             </div>
             <ul class="nav-links">
@@ -33,11 +36,33 @@
                 <li><a href="#menu">Cardápio</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
+            <div class="cart-icon">
+                <a href="#" id="cart-button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
             <div class="burger">
                 <i class="fas fa-hamburger"></i>
             </div>
         </nav>
     </header>
+
+    <!-- Carrinho Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart-button">&times;</span>
+            <div class="cart-header">
+                <img src="/assets/img/logo/hamburger-logo.png" alt="Carrinho">
+                <h2>Seu Carrinho</h2>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> R$ <span id="cart-total">0.00</span>
+            </div>
+            <button id="checkout-button" class="btn">Finalizar Pedido</button>
+        </div>
+    </div>
 
     <section id="home">
         <div class="hero">
@@ -45,7 +70,7 @@
                 <div class="hero-square">
                     <img src="/assets/img/logo/hamburger-logo.png" alt="Hambúrguer">
                 </div>
-                <h1>Bem-vindo à Hamburgueria Saborosa</h1>
+                <h1>Bem-vindo à<br>Hamburgueria Saborosa</h1>
                 <a href="#menu" class="btn">Veja Nosso Cardápio</a>
             </div>
         </div>
@@ -84,74 +109,123 @@
 
         <div class="menu-container">
             <!-- Item 1 -->
-            <div class="menu-item burger">
+            <div class="menu-item burger" data-id="1" data-name="Hambúrguer Clássico" data-price="25.00" >
                 <img src="/assets/img/menu/burguer-1.jpeg" alt="Hambúrguer Clássico">
                 <h3>Hambúrguer Clássico</h3>
                 <p>Pão artesanal, carne 100% bovina, alface, tomate, queijo cheddar e molho especial.</p>
                 <span>R$ 25,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 2 -->
-            <div class="menu-item cheddars">
+            <div class="menu-item cheddars" data-id="2" data-name="Cheddar Especial" data-price="28.00">
                 <img src="/assets/img/menu/burguer-2.jpeg" alt="Cheddar Especial">
                 <h3>Cheddar Especial</h3>
                 <p>Hambúrguer suculento, queijo cheddar derretido, cebola caramelizada e molho BBQ.</p>
                 <span>R$ 28,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 3 -->
-            <div class="menu-item milkshake">
+            <div class="menu-item milkshake" data-id="3" data-name="MilkShake de Chocolate" data-price="15.00">
                 <img src="/assets/img/menu/milkshake-1.jpeg" alt="MilkShake de Chocolate">
                 <h3>MilkShake de Chocolate</h3>
                 <p>Cremoso milkshake com sorvete artesanal de chocolate.</p>
                 <span>R$ 15,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 4 -->
-            <div class="menu-item burger">
+            <div class="menu-item burger" data-id="4" data-name="Hambúrguer de Frango Crocante" data-price="27.00">
                 <img src="/assets/img/menu/burguer-3.jpeg" alt="Hambúrguer de Frango Crocante">
                 <h3>Hambúrguer de Frango Crocante</h3>
                 <p>Pão brioche, filé de frango empanado, alface, maionese especial e queijo prato.</p>
                 <span>R$ 27,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 5 -->
-            <div class="menu-item cheddars">
+            <div class="menu-item cheddars" data-id="5" data-name="Cheddar Bacon" data-price="30.00">
                 <img src="/assets/img/menu/burguer-4.jpeg" alt="Cheddar Bacon">
                 <h3>Cheddar Bacon</h3>
                 <p>Hambúrguer grelhado, queijo cheddar, bacon crocante e molho cheddar defumado.</p>
                 <span>R$ 30,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 6 -->
-            <div class="menu-item especiais">
+            <div class="menu-item especiais"  data-id="6" data-name="Super Combo Especial" data-price="45.00">
                 <img src="/assets/img/menu/burguer-5.jpeg" alt="Super Combo Especial">
                 <h3>Super Combo Especial</h3>
                 <p>Dois hambúrgueres, queijo cheddar, onion rings, molho barbecue e batatas fritas.</p>
                 <span>R$ 45,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 7 -->
-            <div class="menu-item milkshake">
+            <div class="menu-item milkshake" data-id="7" data-name="MilkShake de Morango" data-price="18.00">
                 <img src="/assets/img/menu/milkshake-2.jpeg" alt="MilkShake de Morango">
                 <h3>MilkShake de Morango</h3>
                 <p>Delicioso milkshake com sorvete de morango natural e chantilly.</p>
                 <span>R$ 18,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 8 -->
-            <div class="menu-item sobremesas">
+            <div class="menu-item sobremesas" data-id="8" data-name="Brownie com Sorvete" data-price="20.00">
                 <img src="/assets/img/menu/brownie-ice-1.jpeg" alt="Brownie com Sorvete">
                 <h3>Brownie com Sorvete</h3>
                 <p>Brownie de chocolate quente acompanhado de uma bola de sorvete de baunilha.</p>
                 <span>R$ 20,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 9 -->
-            <div class="menu-item refrigerantes">
+            <div class="menu-item refrigerantes" data-id="9" data-name="Coca-Cola" data-price="7.00">
                 <img src="/assets/img/menu/coca-1.jpeg" alt="Coca-Cola">
                 <h3>Coca-Cola</h3>
                 <p>Refrigerante gelado, clássico e refrescante.</p>
                 <span>R$ 7,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
             <!-- Item 10 -->
-            <div class="menu-item sucos">
+            <div class="menu-item sucos" data-id="10" data-name="Suco de Laranja Natural" data-price="10.00">
                 <img src="/assets/img/menu/suco-1.jpeg" alt="Suco de Laranja Natural">
                 <h3>Suco de Laranja Natural</h3>
                 <p>Suco fresco e natural de laranja, sem adição de açúcar.</p>
-                <span>R$ 10,00</span>
+                <div class="quantity-selector">
+                    <label>Quantidade:</label>
+                    <input type="number" min="1" value="1">
+                </div>
+                <span>R$ 10,00</span><button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
         </div>
     </section>
@@ -180,7 +254,6 @@
             </div>
         </div>
     </section>
-    
 
     <footer>
         <p>&copy; 2024 Hamburgueria Saborosa. Todos os direitos reservados.</p>
@@ -194,6 +267,12 @@
             <h3 id="modal-title"></h3>
             <p id="modal-description"></p>
             <span id="modal-price"></span>
+            <!-- Adicionando quantidade e botão de adicionar ao carrinho no modal -->
+            <div class="modal-quantity-selector">
+                <label>Quantidade:</label>
+                <input type="number" id="modal-quantity" min="1" value="1">
+            </div>
+            <button id="modal-add-to-cart" class="btn">Adicionar ao Carrinho</button>
         </div>
     </div>
 
